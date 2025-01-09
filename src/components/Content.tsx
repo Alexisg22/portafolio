@@ -44,12 +44,12 @@ const Content = () => {
         </h1>
 
         {/* Opciones de navegación */}
-        <ul className="w-[80%] flex flex-col pl-10 gap-4 text-xl font-thin text-center mt-4 cursor-pointer max-sm:flex-row max-sm:pl-0">
+        <ul className="w-[80%] flex flex-col pl-10 gap-4 text-xl font-thin text-center mt-4 cursor-pointer max-sm:flex-row max-sm:pl-0 max-sm:sticky max-sm:top-0">
           {["about", "projects", "skills", "contact"].map((section) => (
             <li
               key={section}
               className={`w-24 text-white border-b-2 border-transparent hover:border-sky-400 transition-all duration-200 hover:scale-105 ${
-                selectedSection === section ? "border-sky-400" : ""
+                selectedSection === section ? "border-sky-500" : ""
               }`}
               onClick={() => setSelectedSection(section as Section)}
             >
