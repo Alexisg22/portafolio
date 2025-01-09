@@ -18,10 +18,19 @@ const Content = () => {
     contact: <Contact />,
   };
 
+  const sectionTitles: Record<Section, string> = {
+    about: "Sobre mí",
+    projects: "Proyectos",
+    skills: "Habilidades",
+    contact: "Contacto",
+  };
+
   return (
     <div className="w-full flex h-5/6 max-sm:h-full">
       {/* Render dinámico de la sección seleccionada */}
-      <div className="w-2/3 max-sm:w-full max-sm:mt-24">{sectionComponents[selectedSection]}</div>
+      <div className="w-2/3 max-sm:w-full max-sm:mt-24">
+        {sectionComponents[selectedSection]}
+      </div>
 
       {/* Navegación */}
       <section className="w-1/3 h-full flex flex-col items-center max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:w-full max-sm:justify-center max-sm:h-24 max-sm:flex-row ">
@@ -38,24 +47,26 @@ const Content = () => {
           </div>
         </div>
 
-        {/* Título */}
+        {/* Título en español */}
         <h1 className="w-[70%] pb-1 mt-4 text-4xl font-thin border-solid border-b-4 max-sm:hidden border-sky-400">
-          {selectedSection.charAt(0).toUpperCase() + selectedSection.slice(1)}
+          {sectionTitles[selectedSection]}
         </h1>
 
         {/* Opciones de navegación */}
         <ul className="w-[80%] flex flex-col pl-10 gap-4 text-xl font-thin text-center mt-4 cursor-pointer max-sm:flex-row max-sm:pl-0 max-sm:sticky max-sm:top-0">
-          {["about", "projects", "skills", "contact"].map((section) => (
-            <li
-              key={section}
-              className={`w-24 text-white border-b-2 border-transparent hover:border-sky-400 transition-all duration-200 hover:scale-105 ${
-                selectedSection === section ? "border-sky-500" : ""
-              }`}
-              onClick={() => setSelectedSection(section as Section)}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </li>
-          ))}
+          {(["about", "projects", "skills", "contact"] as Section[]).map(
+            (section) => (
+              <li
+                key={section}
+                className={`w-24 text-white border-b-2 max-sm:text-sm border-transparent hover:border-sky-400 transition-all duration-200 hover:scale-105 ${
+                  selectedSection === section ? "border-white" : ""
+                }`}
+                onClick={() => setSelectedSection(section)}
+              >
+                {sectionTitles[section]}
+              </li>
+            )
+          )}
         </ul>
       </section>
     </div>

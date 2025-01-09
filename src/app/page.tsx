@@ -21,7 +21,7 @@
           <Content />
 
           <span className="w-full flex justify-end p-3">
-              <p className="text-sm border-solid border-b border-sky-400 text-zinc-300">2025 | Alexis García | Fullstac Developer</p>
+              <p className="text-sm border-solid border-b border-sky-400 text-zinc-300">2025 | Alexis García | Fullstack Developer</p>
           </span>
         </div>
     </div>

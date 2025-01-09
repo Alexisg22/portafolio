@@ -5,26 +5,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Proyecto 1",
-      description: "Una breve descripción del proyecto y las tecnologías utilizadas",
+      title: "Sistema de gestión de usuarios",
+      description: "Es un proyecto realizado para la empresa Andes BPO S.A.S, que se basa en un sistema informático que procesa multiples archivos .csv y organiza la información para su uso, ayudando a reducir tiempos de análisis y cruces de BD manuales.",
       image: "/api/placeholder/400/250",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["React", "Django", "Pandas", "PostgreSQL"],
       liveUrl: "https://proyecto1.com",
       githubUrl: "https://github.com/usuario/proyecto1"
     },
     {
       id: 2,
-      title: "Proyecto 2",
-      description: "Descripción del segundo proyecto y sus características principales",
+      title: "KANAMY",
+      description: "KANAMY es un proyecto de grado, se basa en un sistema de agendamiento de citas para una barbería, resolviendo así la problemática de las barberias convencionales que es la pérdida de tiempo efectivo al realizar asignaciones manales, KANAMY lo hace mucho más sencillo y organizado",
       image: "/api/placeholder/400/250",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
+      technologies: ["JavaScript", "SpringBoot", "CSS", "FireBase", "Flutter"],
       liveUrl: "https://proyecto2.com",
       githubUrl: "https://github.com/usuario/proyecto2"
     },
     {
       id: 3,
-      title: "Proyecto 3",
-      description: "Detalles sobre el tercer proyecto y su implementación",
+      title: "AndesCobra",
+      description: "Un CRM de gestión de cobranza realizado para la empresa Andes BPO S.A.S, un CRM completo para relizar gestiones de cobro, métricas de productividad, marcaciones telefónicas con Wolkvox, generar reportes, administrar usuarios, etc...",
       image: "/api/placeholder/400/250",
       technologies: ["Vue.js", "Express", "PostgreSQL"],
       liveUrl: "https://proyecto3.com",
@@ -58,7 +58,7 @@ const Projects = () => {
           {projects.map((project) => (
             <section
               key={project.id}
-              className="rounded-xl border-solid border border-white hover:border-sky-400 hover:transition-all hover:-translate-y-1 hover:bg-zinc-700 cursor-pointer p-4 flex flex-col gap-4"
+              className="rounded-lg border-solid border border-white hover:border-sky-400 hover:transition-all hover:-translate-y-1 hover:bg-zinc-700 cursor-pointer p-4 flex flex-col gap-4"
             >
               <img
                 src={project.image}
