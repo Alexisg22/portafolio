@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'; // Importar el componente Image de Next.js
-import { Code2, Globe, ArrowUpRight } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
