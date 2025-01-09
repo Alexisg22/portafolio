@@ -1,44 +1,36 @@
 import React from 'react';
+import Image from 'next/image'; // Importar el componente Image de Next.js
 import { Code2, Globe, ArrowUpRight } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "AndesCobra",
+      description: "Un CRM de gestión de cobranza realizado para la empresa Andes BPO S.A.S, un CRM completo para relizar gestiones de cobro, métricas de productividad, marcaciones telefónicas con Wolkvox, generar reportes, administrar usuarios, etc...",
+      image: "/images/projects/andescobra.jpeg",
+      technologies: ["NextJs", "TailwindCSS", "PostgreSQL", "Django", "TypeScript"],
+      liveUrl: "https://proyecto3.com",
+      githubUrl: "https://github.com/usuario/proyecto3"
+    },
+    {
+      id: 2,
       title: "Sistema de gestión de usuarios",
       description: "Es un proyecto realizado para la empresa Andes BPO S.A.S, que se basa en un sistema informático que procesa multiples archivos .csv y organiza la información para su uso, ayudando a reducir tiempos de análisis y cruces de BD manuales.",
-      image: "/api/placeholder/400/250",
+      image: "/images/projects/cesde.jpeg",
       technologies: ["React", "Django", "Pandas", "PostgreSQL"],
       liveUrl: "https://proyecto1.com",
       githubUrl: "https://github.com/usuario/proyecto1"
     },
     {
-      id: 2,
+      id: 3,
       title: "KANAMY",
       description: "KANAMY es un proyecto de grado, se basa en un sistema de agendamiento de citas para una barbería, resolviendo así la problemática de las barberias convencionales que es la pérdida de tiempo efectivo al realizar asignaciones manales, KANAMY lo hace mucho más sencillo y organizado",
-      image: "/api/placeholder/400/250",
+      image: "/images/projects/kanamy.jpeg",
       technologies: ["JavaScript", "SpringBoot", "CSS", "FireBase", "Flutter"],
       liveUrl: "https://proyecto2.com",
       githubUrl: "https://github.com/usuario/proyecto2"
     },
-    {
-      id: 3,
-      title: "AndesCobra",
-      description: "Un CRM de gestión de cobranza realizado para la empresa Andes BPO S.A.S, un CRM completo para relizar gestiones de cobro, métricas de productividad, marcaciones telefónicas con Wolkvox, generar reportes, administrar usuarios, etc...",
-      image: "/api/placeholder/400/250",
-      technologies: ["Vue.js", "Express", "PostgreSQL"],
-      liveUrl: "https://proyecto3.com",
-      githubUrl: "https://github.com/usuario/proyecto3"
-    },
-    {
-      id: 4,
-      title: "Proyecto 4",
-      description: "Información sobre el cuarto proyecto y sus logros",
-      image: "/api/placeholder/400/250",
-      technologies: ["Angular", "Firebase", "SASS"],
-      liveUrl: "https://proyecto4.com",
-      githubUrl: "https://github.com/usuario/proyecto4"
-    }
   ];
 
   return (
@@ -60,9 +52,12 @@ const Projects = () => {
               key={project.id}
               className="rounded-lg border-solid border border-white hover:border-sky-400 hover:transition-all hover:-translate-y-1 hover:bg-zinc-700 cursor-pointer p-4 flex flex-col gap-4"
             >
-              <img
+              {/* Componente Image de Next.js */}
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={500}     // Ancho de la imagen (obligatorio)
+                height={200}    // Alto de la imagen (obligatorio)
                 className="w-full h-48 object-cover rounded-lg"
               />
               
@@ -91,7 +86,7 @@ const Projects = () => {
                     <Code2 size={16} />
                     Código
                   </a>
-                  <a
+                  {/* <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -100,7 +95,7 @@ const Projects = () => {
                     <Globe size={16} />
                     Demo
                     <ArrowUpRight size={14} />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </section>
