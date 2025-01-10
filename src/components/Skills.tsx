@@ -18,48 +18,48 @@ interface SkillCategory {
 const skillsData: SkillCategory[] = [
   {
     id: 1,
-    title: "Frontend Development",
+    title: "Frontend ",
     icon: <Code2 className="w-6 h-6" />,
     skills: [
-      { id: 1, name: "HTML5", level: 90, icon: "/html.svg" },
-      { id: 2, name: "CSS3", level: 85, icon: "/css.svg" },
-      { id: 3, name: "JavaScript", level: 88, icon: "/js.svg" },
-      { id: 4, name: "React", level: 85, icon: "/react.svg" },
-      { id: 5, name: "TypeScript", level: 80, icon: "/ts.svg" },
-      { id: 6, name: "Tailwind CSS", level: 88, icon: "/tailwind.svg" },
+      { id: 1, name: "HTML5", level: 90 },
+      { id: 2, name: "CSS3", level: 85 },
+      { id: 3, name: "JavaScript", level: 88 },
+      { id: 4, name: "React", level: 85 },
+      { id: 5, name: "TypeScript", level: 80 },
+      { id: 6, name: "Tailwind CSS", level: 88 },
     ]
   },
   {
     id: 2,
-    title: "Backend Development",
+    title: "Backend ",
     icon: <Database className="w-6 h-6" />,
     skills: [
-       { id: 1, name: "Django", level: 85, icon: "/express.svg" },
-       { id: 2, name: "PostgreSQL", level: 80, icon: "/postgresql.svg" },
-       { id: 3, name: "Node.js", level: 70, icon: "/node.svg" },
-       { id: 4, name: "FireBase", level: 60, icon: "/mongodb.svg" },
+       { id: 1, name: "Django", level: 85 },
+       { id: 2, name: "PostgreSQL", level: 80},
+       { id: 3, name: "Node.js", level: 70 },
+       { id: 4, name: "FireBase", level: 60 },
     ]
   },
   {
     id: 3,
-    title: "Development Tools",
+    title: "Herramientas de desarrollo",
     icon: <Briefcase className="w-6 h-6" />,
     skills: [
-      { id: 1, name: "Git", level: 85, icon: "/git.svg" },
-      { id: 2, name: "Docker", level: 70, icon: "/docker.svg" },
-      { id: 3, name: "VS Code", level: 90, icon: "/vscode.svg" },
-      { id: 4, name: "Postman", level: 85, icon: "/postman.svg" },
+      { id: 1, name: "Git", level: 85 },
+      { id: 2, name: "Docker", level: 70 },
+      { id: 3, name: "VS Code", level: 90 },
+      { id: 4, name: "Postman", level: 85 },
     ]
   },
   {
     id: 4,
-    title: "Soft Skills",
+    title: "Habilidades blandas",
     icon: <Brain className="w-6 h-6" />,
     skills: [
-      { id: 1, name: "Problem Solving", level: 90 },
-      { id: 2, name: "Team Work", level: 95 },
-      { id: 3, name: "Communication", level: 88 },
-      { id: 4, name: "Adaptability", level: 92 },
+      { id: 1, name: "Solución de problemas", level: 90 },
+      { id: 2, name: "Trabajo en equipo", level: 95 },
+      { id: 3, name: "Comunicación", level: 88 },
+      { id: 4, name: "Adaptabilidad", level: 92 },
     ]
   }
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'; // Importar el componente Image de Next.js
+import Image from 'next/image'; 
 import { Code2 } from 'lucide-react';
 
 const Projects = () => {
@@ -11,7 +11,7 @@ const Projects = () => {
       image: "/images/projects/andescobra.jpeg",
       technologies: ["NextJs", "TailwindCSS", "PostgreSQL", "Django", "TypeScript"],
       liveUrl: "https://proyecto3.com",
-      githubUrl: "https://github.com/usuario/proyecto3"
+      githubUrl: "https://github.com/Alexsanta045/AndesCobra-Front"
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const Projects = () => {
       image: "/images/projects/cesde.jpeg",
       technologies: ["React", "Django", "Pandas", "PostgreSQL"],
       liveUrl: "https://proyecto1.com",
-      githubUrl: "https://github.com/usuario/proyecto1"
+      githubUrl: "https://github.com/Alexisg22/proyecto-cesde"
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const Projects = () => {
       image: "/images/projects/kanamy.jpeg",
       technologies: ["JavaScript", "SpringBoot", "CSS", "FireBase", "Flutter"],
       liveUrl: "https://proyecto2.com",
-      githubUrl: "https://github.com/usuario/proyecto2"
+      githubUrl: "https://github.com/Alexisg22/proyecto_kanamy"
     },
   ];
 
@@ -52,12 +52,11 @@ const Projects = () => {
               key={project.id}
               className="rounded-lg border-solid border border-white hover:border-sky-400 hover:transition-all hover:-translate-y-1 hover:bg-zinc-700 cursor-pointer p-4 flex flex-col gap-4"
             >
-              {/* Componente Image de Next.js */}
               <Image
                 src={project.image}
                 alt={project.title}
-                width={500}     // Ancho de la imagen (obligatorio)
-                height={200}    // Alto de la imagen (obligatorio)
+                width={500}
+                height={200}
                 className="w-full h-48 object-cover rounded-lg"
               />
               
