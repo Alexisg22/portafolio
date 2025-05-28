@@ -34,6 +34,7 @@ const skillsData: SkillCategory[] = [
     title: "Backend ",
     icon: <Database className="w-6 h-6" />,
     skills: [
+      { id: 5, name: "Python", level: 90 },
        { id: 1, name: "Django", level: 85 },
        { id: 2, name: "PostgreSQL", level: 80},
        { id: 3, name: "Node.js", level: 70 },
@@ -47,7 +48,7 @@ const skillsData: SkillCategory[] = [
     skills: [
       { id: 1, name: "Git", level: 85 },
       { id: 2, name: "Docker", level: 70 },
-      { id: 3, name: "VS Code", level: 90 },
+      { id: 3, name: "VS Code", level: 95 },
       { id: 4, name: "Postman", level: 85 },
     ]
   },
