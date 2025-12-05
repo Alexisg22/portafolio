@@ -1,3 +1,6 @@
 {
-    "about-me": "About me"
+    "about-me": "About me",
+    "about-me-description": "Hi, my name is Alexis García. I’m a full-stack developer with over two years of experience building end-to-end web solutions, from architectural design to production deployment. I have strong expertise in modern technologies such as JavaScript, TypeScript, Python, Firebase, relational and non-relational databases, as well as cloud services. I’m passionate about creating efficient, scalable and well-structured systems that deliver real value to users.",
+    "english": "English",
+    "spanish": "Spanish"
 }
