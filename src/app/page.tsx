@@ -1,11 +1,13 @@
-  import { FaGithub, FaLinkedin } from "react-icons/fa";
-  import { BiLogoGmail } from "react-icons/bi";
-  import Content from "@/components/Content";
+  import { FaGithub, FaLinkedin } from "react-icons/fa"
+  import { BiLogoGmail } from "react-icons/bi"
+  import Content from "@/components/Content"
 
   export default function Home() {
     return (
     <div className="w-full min-h-screen flex justify-center items-center">
         <div className="w-[90%] h-screen max-sm:w-full">
+          <header>
+          </header>
           <header className="w-full flex justify-end gap-4 p-4 max-sm:absolute max-sm:top-full max-sm:justify-start">
             <a href="mailto:garciaciroalexis@gmail.com" className="text-white hover:transition-all hover:scale-110 hover:text-sky-400">
               <BiLogoGmail size={30} />
