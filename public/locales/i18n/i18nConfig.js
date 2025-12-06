@@ -11,6 +11,7 @@ i18n
   .use(resourcesToBackend((lng, ns) => import(`../${lng}/${ns}.json`)))
   .init({
     fallbackLng,
+    lng: "es",
     supportedLngs,
     ns: ["common"],
     defaultNS: "common",

@@ -5,8 +5,8 @@ const { t } = useTranslation()
   return (
     <>
         <section className="w-full h-full flex flex-col justify-center items-center  border-solid border-l-4 border-sky-400 ">
-              <h1 className="w-full text-7xl pl-14 font-thin">{t('about-me')}</h1>
-              <p className="w-[80%] my-4 border-solid border-l-4 p-3 border-sky-400">{t('about-me-description')}</p>
+              <h1 className="w-full text-7xl pl-14 font-thin">{t('about')}</h1>
+              <p className="w-[80%] my-4 border-solid border-l-4 p-3 border-sky-400">{t('about-description')}</p>
           </section>
     </>
   )

@@ -5,21 +5,24 @@ import About from "./About"
 import Projects from "./Projects"
 import Skills from "./Skills"
 import Contact from "./Contact"
+import { useTranslation } from "react-i18next"
+import { LanguageComponent } from "./LanguageComponent"
 
 const Content = () => {
+  const { t } = useTranslation()
   type Section = "about" | "projects" | "skills" | "contact"
   const [selectedSection, setSelectedSection] = useState<Section>("about")
   const sectionComponents: Record<Section, React.JSX.Element> = {
     about: <About />,
     projects: <Projects />,
     skills: <Skills />,
-    contact: <Contact />,
+    contact: <Contact />
   }
   const sectionTitles: Record<Section, string> = {
-    about: "Sobre mí",
-    projects: "Proyectos",
-    skills: "Habilidades",
-    contact: "Contacto",
+    about: "about",
+    projects: "projects",
+    skills: "skills",
+    contact: "contact",
   }
   return (
     <div className="w-full flex h-5/6 max-sm:h-full">
@@ -39,22 +42,25 @@ const Content = () => {
           </div>
         </div>
         <h1 className="w-[70%] pb-1 mt-4 text-4xl font-thin border-solid border-b-4 max-sm:hidden border-sky-400">
-          {sectionTitles[selectedSection]}
+          {t(sectionTitles[selectedSection])}
         </h1>
-        <ul className="w-[80%] flex flex-col pl-10 gap-4 text-xl font-thin text-center mt-4 cursor-pointer max-sm:flex-row max-sm:pl-0 max-sm:sticky max-sm:top-0">
+        <ul className="w-[80%] flex flex-col pl-10 gap-4 text-xl font-thin text-center mt-4 cursor-pointer max-sm:flex-row max-sm:pl-0 max-sm:sticky max-sm:top-0 max-sm:gap-1">
           {(["about", "projects", "skills", "contact"] as Section[]).map(
             (section) => (
               <li
                 key={section}
                 className={`w-24 text-white border-b-2 max-sm:text-sm border-transparent hover:border-sky-400 transition-all duration-200 hover:scale-105 ${
-                  selectedSection === section ? "border-white" : ""
+                  selectedSection === section ? "border-sky-500" : ""
                 }`}
                 onClick={() => setSelectedSection(section)}
               >
-                {sectionTitles[section]}
+                {t(sectionTitles[section])}
               </li>
             )
           )}
+          <li className="sm:hidden flex justify-center items-center">
+            <LanguageComponent />
+          </li>
         </ul>
       </section>
     </div>
